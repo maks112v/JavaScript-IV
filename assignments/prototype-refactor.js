@@ -62,11 +62,11 @@ class GameLog {
 				this.addRow(match, "bg-success");
 			}
 			else if(crit){
-				let match = `${attacked.name} was hit with and lost ${damage} and has ${attacked.healthPoints}`;
+				let match = `${attacked.name} was hit with and lost ${damage} and has ${attacked.healthPoints} health left.`;
 				this.addRow(match, "bg-warning");
 			}
 			else {
-				let match = `${attacked.name} was hit and lost ${damage} and has ${attacked.healthPoints}`;
+				let match = `${attacked.name} was hit and lost ${damage} and has ${attacked.healthPoints} health left.`;
 				this.addRow(match);
 			}
 		}
@@ -271,7 +271,7 @@ let fight = (fighter1, fighter2) => {
 	}
 }
 
-//fight(yokai,hamada);
+fight(yokai,hamada);
 
 const startMatch = () => {
 	fight(yokai,hamada);
